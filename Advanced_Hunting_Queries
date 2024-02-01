@@ -1,0 +1,16 @@
+### Check if files from a known malicious sender are on your devices
+
+Assuming you know of an email address sending malicious files (`MaliciousSender@example.com`), you can run this query to determine if files from this sender exist on your devices. You can use this query, for example, to identify devices affected by a malware distribution campaign.
+
+```kusto
+EmailAttachmentInfo
+| where SenderFromAddress =~ "MaliciousSender@example.com"
+//Get emails with attachments identified by a SHA-256
+| where isnotempty(SHA256)
+| join (
+//Check devices for any activity involving the attachments
+DeviceFileEvents
+| project FileName, SHA256, DeviceName, DeviceId
+) on SHA256
+| project Timestamp, FileName , SHA256, DeviceName, DeviceId,  NetworkMessageId, SenderFromAddress, RecipientEmailAddress
+```
