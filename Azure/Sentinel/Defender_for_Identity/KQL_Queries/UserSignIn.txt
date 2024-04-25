@@ -18,3 +18,13 @@ SigninLogs
 | project TimeGenerated, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
 | where AuthenticationDetails contains "True"
 | where Location !contains "CH"
+
+#----
+
+# Get Successful Sign-ins outside of Switzerland for the whole company
+
+SigninLogs
+| where UserPrincipalName endswith "achtgradost.ch"
+| project TimeGenerated, UserDisplayName, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
+| where AuthenticationDetails contains "True"
+| where Location !contains "CH"
