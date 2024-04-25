@@ -1,0 +1,20 @@
+SigninLogs
+| where UserPrincipalName contains "UserName"
+
+#------------------
+
+# Basic Query
+
+SigninLogs
+| where UserPrincipalName contains "admin.bag"
+| project TimeGenerated, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
+
+#----
+
+# Get Successful Sign-ins outside of Switzerland
+
+SigninLogs
+| where UserPrincipalName contains "UserName"
+| project TimeGenerated, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
+| where AuthenticationDetails contains "True"
+| where Location !contains "CH"
