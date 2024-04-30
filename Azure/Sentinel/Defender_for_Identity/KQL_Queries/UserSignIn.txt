@@ -14,8 +14,8 @@ SigninLogs
 # Get Successful Sign-ins outside of Switzerland
 
 SigninLogs
-| where UserPrincipalName contains "UserName"
-| project TimeGenerated, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
+| where UserPrincipalName contains "wyrsch"
+| project TimeGenerated, UserPrincipalName, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
 | where AuthenticationDetails contains "True"
 | where Location !contains "CH"
 
