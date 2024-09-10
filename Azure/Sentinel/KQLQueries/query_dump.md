@@ -1,5 +1,5 @@
 # Show if the Sign-Ins were Interactive:
-	```Bash
+	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
 	| where UserId contains "EmailAddress" 
@@ -7,7 +7,7 @@
 	| project TimeGenerated, UserPrincipalName, IPAddress, Location, AuthenticationDetails, DeviceDetail
  
 # Show if the Authentification were made from IOS Devices:
-	```Bash
+	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
 	| where UserPrincipalName contains "EmailAddress"
@@ -16,7 +16,7 @@
 	| project TimeGenerated, UserPrincipalName, IPAddress, Location, AuthenticationDetails, DeviceDetail, OperatingSystem = tostring(DeviceDetail.operatingSystem)
 
 # Check if the Device is Compliant:
-	```Bash
+	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
 	| where UserId contains "5b0d45949-4b18-4f26-a688-ad9f0c514d49"
