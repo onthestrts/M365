@@ -1,4 +1,4 @@
-# Show if the Sign-Ins were Interactive:
+## Show if the Sign-Ins were Interactive:
 	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
@@ -6,7 +6,7 @@
 	| where IsInteractive == "true" 
 	| project TimeGenerated, UserPrincipalName, IPAddress, Location, AuthenticationDetails, DeviceDetail
  
-# Show if the Authentification were made from IOS Devices:
+## Show if the Authentification were made from IOS Devices:
 	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
@@ -15,7 +15,7 @@
 	| where DeviceDetail.operatingSystem contains "Ios" or DeviceDetail.operatingSystem contains "ios" or DeviceDetail.operatingSystem contains "IOS"
 	| project TimeGenerated, UserPrincipalName, IPAddress, Location, AuthenticationDetails, DeviceDetail, OperatingSystem = tostring(DeviceDetail.operatingSystem)
 
-# Check if the Device is Compliant:
+## Check if the Device is Compliant:
 	```bash
 	SigninLogs
 	| where TimeGenerated > ago(14d)
