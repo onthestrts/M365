@@ -1,0 +1,12 @@
+|_.IP|_.Country|_.Region|_.City|_.Latitude|_.Longitude|_.ISP|
+| 2a02:aa11:3143:4700:3039:9063:5891:37e4 | Switzerland | Grisons | Chur | 46.851 | 9.5389 | Sunrise GmbH |
+| 2a02:aa11:3143:4700:280c:c0a8:456c:59da | Switzerland | Grisons | Chur | 46.851 | 9.5389 | Sunrise GmbH |
+| 2a02:aa11:3143:4700:74ff:7632:a77d:2c3 | Switzerland | Grisons | Chur | 46.851 | 9.5389 | Sunrise GmbH |
+| 2a02:26f7:e34c:4000:e0ec:7a59:e57e:5637 | Switzerland | Zurich | Zurich | 47.3682 | 8.5671 | Akamai Technologies, Inc. |
+| 194.230.145.15 | Switzerland | Lucerne | Lucerne | 47.0511 | 8.3056 | Sunrise GmbH |
+| 31.10.140.236 | Switzerland | Aargau | Neuenhof | 47.4554 | 8.3296 | Sunrise GmbH |
+| 178.197.195.177 | Switzerland | Vaud | Lausanne | 46.5184 | 6.6436 | Swisscom (Schweiz) AG - Bluewin |
+| 2a02:26f7:e344:4000:7590:4814:c862:7f79 | Switzerland | Zurich | Zurich | 47.3682 | 8.5671 | Akamai Technologies, Inc. |
+| 178.197.210.250 | Switzerland | Zug | Zug | 47.1685 | 8.5035 | Swisscom (Schweiz) AG - Bluewin |
+| 194.230.148.127 | Switzerland | Lucerne | Lucerne | 47.0511 | 8.3056 | Sunrise GmbH |
+| 46.140.133.34 | Switzerland | Zurich | Zurich | 47.3661 | 8.5243 | Sunrise UPC GmbH |

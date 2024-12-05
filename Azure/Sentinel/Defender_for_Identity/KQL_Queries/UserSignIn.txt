@@ -7,7 +7,7 @@ SigninLogs
 
 SigninLogs
 | where UserPrincipalName contains "admin.bag"
-| project TimeGenerated, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
+| project TimeGenerated,UserPrincipalName, AppDisplayName, ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
 
 #----
 
@@ -28,3 +28,9 @@ SigninLogs
 | project TimeGenerated, UserDisplayName, AppDisplayName,ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
 | where AuthenticationDetails contains "True"
 | where Location !contains "CH"
+
+# Filter for specific IPAddress
+
+SigninLogs
+| where IPAddress contains "IPAddress"
+| project TimeGenerated,UserPrincipalName, AppDisplayName, ClientAppUsed, IPAddress, Location, RiskState, AuthenticationDetails, ResultDescription, Status
